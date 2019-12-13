@@ -1,0 +1,18 @@
+@charset "utf-8";
+body{
+	background-color: #EEEEEE;
+	z-index: 1;
+}
+h1{
+	background-color: #232F3E;
+	color: #FFFFFF;
+	z-index: 2;
+	font-size: 90px;
+}
+a:link, a:visited, a:active {
+  	color: blue;
+	font-size: 40px;
+}
+a:hover{
+	color: red;
+}
