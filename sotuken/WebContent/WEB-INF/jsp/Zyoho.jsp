@@ -74,6 +74,7 @@
 			<br/>
 			<div align="right">
 				<input type="submit" value="確認画面へ" style="font-size: 20px" ></input>	
+			</div>
 		</div>
 		</div>
 		<input type="hidden" name="sno" value=<%= sno %>></input>
@@ -82,11 +83,13 @@
 		<input type="hidden" name="month" value="-"></input>
 		</form>
 	</div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
 	<div id="footer"><!--フッター-->
 		<i id="copyright"><small>Copyright © 2019-2020 Tohoku Computer College All Rights Reserved.</small></i>
 	</div>
-	
 </div>
-
 </body>
 </html>

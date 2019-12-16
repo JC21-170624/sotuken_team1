@@ -8,7 +8,6 @@
 <title>検定申込み窓口簡略化システム</title>
 <link href="style_khome.css" rel="stylesheet" type="text/css" />
 <link href="designstyle.css" rel="stylesheet" type="text/css" />
-​
 </head>
 <body>
 
@@ -64,8 +63,8 @@
 			</br>
 			<div align="right">
 			<div id="kensaku">
-			<button type="submit" name="reset" value="reset" style="font-size: 20px">リセット</button>
-			<button type="submit" name="reset" value="noreset" style="font-size: 20px">検索</button>
+			<button type="submit" name="reset" value="reset" style="font-size: 20px; width: 80px; heght: 40px;">リセット</button>
+			<button type="submit" name="reset" value="noreset" style="font-size: 20px; width: 80px; heght: 40px;">検索</button>
 			</div>
 			</div>
 		</div>

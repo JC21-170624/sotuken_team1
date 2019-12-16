@@ -56,9 +56,12 @@
 				<div style="float: left"><button type="submit" name="kakunin" value="back" style="font-size: 20px">戻る</button></div>
 				<div style="text-align: right"><button type="submit" name="kakunin" value="go" style="font-size: 20px">確定</button></div>　
 			<br/>
-		
 		</div>
 		</div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
 	</form>
 	<div id="footer"><!--フッター-->
 		<i id="copyright"><small>Copyright © 2019-2020 Tohoku Computer College All Rights Reserved.</small></i>

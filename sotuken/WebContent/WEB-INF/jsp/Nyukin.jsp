@@ -36,15 +36,25 @@
 		<h2>申込み入金確認</h2>
 		<form method="get" action="./Message2">
 		<div align="center">
-		<div id="empty">
+		<div id="empty1">
 			<div align="left">
-			<div id="a">
+			<div id="empty2">
+				<div align="left">
+				<div id="a">
 				
-				<p>試験名    : <%= list[9] %></p>
-				<p>学籍番号: <%= list[1] %></p>
+					<p>試験名    : <%= list[9] %></p>
+					<p>学籍番号: <%= list[1] %></p>
 				
-				<br/>
-				<br/>
+					<br/>
+					<br/>
+				</div>
+				</div>
+			</div>
+			</div>
+			<div align="left">
+			<div id="empty3">
+				<div align="left">
+				<div id="b">
 				<table border ="1" cellpadding="10">
 					<tr>
 						<th>受験番号</th><td><input type="text" name="juken_no" style="font-size: 28px" ></td>
@@ -138,17 +148,23 @@
 				<%
 					}
 				%>
+				<input type="hidden" name="mno" value=<%= mno %>></input>
 			</div>
-			</div>
-			<input type="hidden" name="mno" value=<%= mno %>></input>
-		<br/>
-				<div style="float: left"><button type="submit" name="kakunin" value="back" style="font-size: 20px" >戻る</button></div>
-				<div style="text-align: right"><button type="submit" name="kakunin" value="go" style="font-size: 20px" >入金完了</button></div>　
 			<br/>
+			<br/>
+			<div style="float: left"><button type="submit" name="kakunin" value="back" style="font-size: 20px" >戻る</button></div>
+			<div style="text-align: right"><button type="submit" name="kakunin" value="go" style="font-size: 20px" >入金完了</button></div>　
 			</div>
 		</div>
 		</div>
+	</div>
+	</div>
+	</div>
 		</form>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
 	<div id="footer"><!--フッター-->
 		<i id="copyright"><small>Copyright © 2019-2020 Tohoku Computer College All Rights Reserved.</small></i>
 	</div>

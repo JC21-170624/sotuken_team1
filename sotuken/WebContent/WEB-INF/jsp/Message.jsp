@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>検定申込み窓口簡略化システム</title>
 <link href="style_message.css" rel="stylesheet" type="text/css" />
-​<link href="designstyle.css" rel="stylesheet" type="text/css" />
+<link href="designstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -35,6 +35,10 @@
 				</div>
 			</div>
 	</div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
 	<div id="footer"><!--フッター-->
 		<i id="copyright"><small>Copyright © 2019-2020 Tohoku Computer College All Rights Reserved.</small></i>
 	</div>

@@ -98,6 +98,10 @@
 		%>
 		</form>
 		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
 	<div id="footer"><!--フッター-->
 		<i id="copyright"><small>Copyright © 2019-2020 Tohoku Computer College All Rights Reserved.</small></i>
 	</div>
