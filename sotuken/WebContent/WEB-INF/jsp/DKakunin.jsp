@@ -56,8 +56,12 @@
 			</div>
 		</div>
 		</div>
-		<input type="hidden" name="mno" value=<%= list[0] %>>
+		<input type="hidden" name="mno" value=<%= list[0] %>/>
 		</form>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
 	<div id="footer"><!--フッター-->
 		<i id="copyright"><small>Copyright © 2019-2020 Tohoku Computer College All Rights Reserved.</small></i>
 	</div>

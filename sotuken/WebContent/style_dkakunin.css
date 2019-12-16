@@ -34,6 +34,7 @@ a{
 	padding: 0;
 	margin-left: 180px;/*marginを150から180に変更（変更かずき）*/
 	padding-bottom: 10em;
+	display: table;
 }
 #empty {
 	display: table;

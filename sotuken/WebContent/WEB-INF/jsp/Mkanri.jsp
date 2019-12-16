@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>検定申込み窓口簡略化システム</title>
 <link href="style_mkanri.css" rel="stylesheet" type="text/css" />
-​<link href="style_mkanridesign.css" rel="stylesheet" type="text/css" />
+<link href="style_mkanridesign.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -65,12 +65,13 @@
 			</br>
 			<div align="right">
 			<div id="kensaku">
-			<button type="submit" name="reset" value="noreset" style="font-size: 20px">検索</button>
-			<button type="submit" name="reset" value="reset" style="font-size: 20px">リセット</button>
+			<button type="submit" name="reset" value="noreset" style="font-size: 20px; width: 120px; heght: 40px;">検索</button>
+			<button type="submit" name="reset" value="reset" style="font-size: 20px; width: 120px; heght: 40px;">リセット</button>
 			</form>
 			<form method="get" action="./Nyukin">
 			<br />
-			<button type="submit" name="mkanri" value="money" style="font-size: 20px">入金・登録</button> <button type="submit" name="mkanri" value="delete" style="font-size: 20px">削除</button>
+			<button type="submit" name="mkanri" value="money" style="font-size: 20px; width: 120px; heght: 40px;">入金・登録</button>
+			<button type="submit" name="mkanri" value="delete" style="font-size: 20px; width: 120px; heght: 40px;">削除</button>
 			</div>
 			</div>
 		</div>
@@ -114,6 +115,7 @@
 		%>
 	</form>
 	</div>
+	<br/>
 	<br/>
 	<br/>
 	<br/>

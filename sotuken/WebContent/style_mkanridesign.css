@@ -2,6 +2,11 @@
 body{
 	background-color: #EEEEEE;
 	z-index: 1;
+	width: 100%;
+	min-width: 1700px;
+}
+#header{
+	min-width:  1500px;
 }
 h1{
 	background-color: #232F3E;
@@ -21,12 +26,17 @@ h3{
 }
 #contents{
 	background-color: #FFFFFF;
+	min-height: 560px;
+	border-style: solid;
+	border-width: 1px; 
+	min-width:  1500px;
 }
 #footer{
 	background-color: #232F3E;
 	color: #FFFFFF;
 	z-index: 4;
 	font-size: 20px;
+	min-width:  1500px;
 }
 table{
 	font-size: 20px;
