@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class GHome
@@ -35,7 +36,12 @@ public class GHome extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String gno = "170000";
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			response.sendRedirect("/sotuken/Login");
+		}
+		
+		String gno = (String)session.getAttribute("gno");
 		
 				// 該当するオラクルデータベースに対して、SELECT文を実行する。結果は変数「rs」に入れている。
 				try {
