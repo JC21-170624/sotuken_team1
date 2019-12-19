@@ -10,13 +10,22 @@
 <link href="logindesignstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<%
+	String inschk = (String)request.getAttribute("inschk");
+	String message = "";
+	
+	if(inschk.equals("1")){
+		message = "ログイン処理に失敗しました。申し訳ありませんが時間をおいてから再度お試しください。";
+	}
+%>
 <div id="container">
 
 		<h1>検定申込み窓口簡略化システム</h1>
 
 	<div id="login">
 		<div align="center">
-			<a href="./GHome">ログイン</a><br />
+			<p style="font-size: 20px"><%= message %></p>
+			<a href="https://192.168.54.212/r01JC21Login/msLoginDirect?id=1111">ログイン</a><br />
 			<a href="./KHome">管理者ログイン</a>
 		</div>
 	</div>

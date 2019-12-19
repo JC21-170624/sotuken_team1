@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Kakunin
@@ -28,7 +29,14 @@ public class Kakunin extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String gno = request.getParameter("gno");
+		
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else if(session.getAttribute("gno") == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else {
+		
 		String sno = request.getParameter("sno");
 		String menjo = request.getParameter("menjo");
 		String henko = request.getParameter("henko");
@@ -38,7 +46,6 @@ public class Kakunin extends HttpServlet {
 		String ydate = year + "/" + month;
 		
 		if(sno.contentEquals("S001")) {
-			request.setAttribute("gno", gno);
 			request.setAttribute("sno", sno);
 			request.setAttribute("menjo", menjo);
 			request.setAttribute("henko", henko);
@@ -46,31 +53,37 @@ public class Kakunin extends HttpServlet {
 			rd.forward(request, response);
 			
 		}else if(sno.contentEquals("S002")) {
-			request.setAttribute("gno", gno);
+			if(menjuken.length() == 0) {
+				int backflg = 1; // 12ŒŽ19“ú‚É’Ç‰Á
+				request.setAttribute("errflg", "1"); // 12ŒŽ19“ú‚É’Ç‰Á
+				request.setAttribute("backflg", backflg); // 12ŒŽ19“ú‚É’Ç‰Á
+				request.setAttribute("sno", sno);
+				request.setAttribute("menjuken", menjuken);
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Menjo.jsp");
+				rd.forward(request, response);
+			}
 			request.setAttribute("sno", sno);
 			request.setAttribute("menjuken", menjuken);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KMenjo.jsp");
 			rd.forward(request, response);
 			
 		}else if(sno.contentEquals("S003")) {
-			request.setAttribute("gno", gno);
 			request.setAttribute("sno", sno);
 			request.setAttribute("ydate", ydate);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KITpass.jsp");
 			rd.forward(request, response);
 			
 		}else if(sno.contentEquals("S004") || sno.contentEquals("S005") || sno.contentEquals("S006")) {
-			request.setAttribute("gno", gno);
 			request.setAttribute("sno", sno);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KJavan.jsp");
 			rd.forward(request, response);
 			
 		}else if(sno.contentEquals("S007") || sno.contentEquals("S008") || sno.contentEquals("S009") || sno.contentEquals("S010")) {
-			request.setAttribute("gno", gno);
 			request.setAttribute("sno", sno);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KOracle.jsp");
 			rd.forward(request, response);
 			
+		}
 		}
 	}
 

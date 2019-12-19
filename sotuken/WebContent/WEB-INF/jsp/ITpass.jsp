@@ -13,7 +13,7 @@
 	int backflg = (int) request.getAttribute("backflg");
 	
 	String sno = "";
-	String gno = "";
+	String gno = (String)session.getAttribute("gno");
 	String ydate = "";
 	String[] ccy = {"","","","","",""};
 	String[] ccm = {"","","","","","","","","","","",""};
@@ -86,13 +86,14 @@
 	<div id="contents">
 		<h2>ITパスポート試験<br />申込み画面</h2>
 		<form method="get" action="./Kakunin">
+		<p style="text-align:center">申込みに必要な情報を入力してください</p>
 		<div align="center">
 		<div id="empty">
 			<div align="left">
 			<div id="a">
 				<table border ="1" align ="left" cellpadding ="10"><!--本文-->
 					<tr>
-						<th>学籍番号</th>	<td><input name ="gno" type="number" maxlength="6" style="font-size: 28px" value=<%= gno %>></input></td>
+						<th>学籍番号</th>	<th><%= gno %></th>
 					</tr>
 					<tr>
 						<th>受験予定年月</th>	<td><select name ="year" style="font-size: 28px" ><option value ="2019" <%= ccy[0] %>>2019</option>

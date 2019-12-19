@@ -12,7 +12,7 @@
 <body>
 
 <% 
-	String gno = (String)request.getAttribute("gno");
+	String gno = (String)session.getAttribute("gno");
 	String sno = (String)request.getAttribute("sno");
 	String menjo = (String)request.getAttribute("menjo");
 	String henko = (String)request.getAttribute("henko");
@@ -33,6 +33,7 @@
 	<div id="contents">
 	<h2>確認画面</h2>
 	<form  method="get" action="./Message">
+		<p style="text-align:center">以下の内容で申込みます。よろしければ確定ボタンを押してください。</p>
 			<div align="center">
 		<div id="empty">
 			<div align="left">

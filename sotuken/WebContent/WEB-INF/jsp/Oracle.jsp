@@ -14,7 +14,7 @@
 	int backflg = (int) request.getAttribute("backflg");
 	
 	String sno = "";
-	String gno = "";
+	String gno = (String)session.getAttribute("gno");
 	
 	if(backflg == 0){
 		sno = (String) request.getAttribute("sno");
@@ -39,6 +39,7 @@
 		<h2>OracleMaster</br>
 		申込み画面</h2>
 		<form method="get" action="./Kakunin">
+		<p style="text-align:center">申込みに必要な情報を入力してください</p>
 		<div align="center">
 		<div id="empty">
 			<div align="left">
@@ -46,7 +47,7 @@
 				<table border ="1" align ="left" cellpadding ="10"><!--本文-->
 				<caption><!--テーブル名--></caption>
 					<tr>
-						<th>学籍番号</th><th><input name="gno" type="number" maxlength="6"  style="font-size: 28px" value=<%= gno %>></input></th><!--<th></th>で増やす-->
+						<th>学籍番号</th><th><%= gno %></th><!--<th></th>で増やす-->
 					</tr>
 				</table>
 			</div>

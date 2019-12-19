@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class JukenKakunin
@@ -34,6 +35,14 @@ public class JukenKakunin extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else if(session.getAttribute("gno") == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else {
+			
 		String nnoStr = request.getParameter("nno");
 		int nno;
 		
@@ -74,6 +83,7 @@ public class JukenKakunin extends HttpServlet {
 				rd.forward(request, response);
 				
 				}catch(SQLException | ClassNotFoundException e) {e.printStackTrace();}
+		}
 		
 		}
 		

@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class GSiken
@@ -34,6 +35,14 @@ public class GSiken extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else if(session.getAttribute("gno") == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else {
+			
 		// 該当するオラクルデータベースに対して、SELECT文を実行する。結果は変数「rs」に入れている。
 		try {
 			final String driverName = "oracle.jdbc.driver.OracleDriver";
@@ -71,6 +80,7 @@ public class GSiken extends HttpServlet {
 			rd.forward(request, response);
 			
 			}catch(SQLException | ClassNotFoundException e) {e.printStackTrace();}
+		}
 	}
 
 }
