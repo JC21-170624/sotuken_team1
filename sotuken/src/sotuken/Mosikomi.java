@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Mosikomi
@@ -28,6 +29,13 @@ public class Mosikomi extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else if(session.getAttribute("gno") == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else {
+			
 		String sno = request.getParameter("sno");
 		
 		int backflg = 0;
@@ -40,6 +48,7 @@ public class Mosikomi extends HttpServlet {
 			
 		}else if(sno.contentEquals("S002")) {
 			request.setAttribute("backflg", backflg);
+			request.setAttribute("errflg", "0"); // 未入力項目のチェックで使う。0の場合は初めてその画面に遷移するとき。
 			request.setAttribute("sno", sno);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Menjo.jsp");
 			rd.forward(request, response);
@@ -62,6 +71,7 @@ public class Mosikomi extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Oracle.jsp");
 			rd.forward(request, response);
 			
+		}
 		}
 	}
 

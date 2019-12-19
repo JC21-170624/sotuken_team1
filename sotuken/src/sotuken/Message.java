@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Message
@@ -34,6 +35,14 @@ public class Message extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else if(session.getAttribute("gno") == null) {
+			response.sendRedirect("/sotuken/Login"); 
+		}else {
+			
 		String sno = request.getParameter("sno");
 		String gno = request.getParameter("gno");
 		String menjo = request.getParameter("menjo");
@@ -56,6 +65,7 @@ public class Message extends HttpServlet {
 				rd.forward(request, response);
 				
 			}else if(sno.contentEquals("S002")) {
+				request.setAttribute("errflg", "0");
 				request.setAttribute("backflg", backflg);
 				request.setAttribute("sno", sno);
 				request.setAttribute("gno", gno);
@@ -138,12 +148,13 @@ public class Message extends HttpServlet {
 			if(messageID > 0) {
 				message = "申込みが完了しました。";
 			}else if(messageID == 0) {
-				message = "申込みに失敗しました。入力内容に誤りがないかご確認ください。";
+				message = "申込みに失敗しました。申し訳ありませんが時間を置いてからまたお試しください。";
 			}
 			
 			request.setAttribute("message", message);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Message.jsp");
 			rd.forward(request, response);
+		}
 		
 		}
 		

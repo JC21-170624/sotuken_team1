@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -51,6 +52,7 @@ public class MailGet extends HttpServlet {
 			Class.forName(driverName);
 			Connection connection=DriverManager.getConnection(url,id,pass);
 			
+			// 過去にログインしたことがあるユーザーかどうかを調べるためのSQL
 			PreparedStatement st = 
 					connection.prepareStatement(
 						"select * from gakusei where g_no = ?"
@@ -58,9 +60,11 @@ public class MailGet extends HttpServlet {
 			st.setString(1, gno);
 			ResultSet rs = st.executeQuery();
 			
+			// rsに何も入っていなければ新規のユーザー
 			int result = 1;
 			if(rs.next() == false) {
 				
+				// 新規ユーザーの情報を学生表に新たに登録
 				PreparedStatement st2 = 
 						connection.prepareStatement(
 							"insert into gakusei values(?, ?)"
@@ -71,10 +75,13 @@ public class MailGet extends HttpServlet {
 				
 			}
 			
+			// 新規ユーザー登録がうまくいかなかった時のみを検知して、ログイン画面にもう一度飛ばす
 			if(result > 0) {
 				response.sendRedirect("/sotuken/GHome");
 			}else {
-				response.sendRedirect("/sotuken/Login");
+				request.setAttribute("inschk", "1");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Login.jsp");
+				rd.forward(request, response);
 			}
 			
 			}catch(SQLException | ClassNotFoundException e) {e.printStackTrace();}
