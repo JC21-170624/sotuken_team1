@@ -14,7 +14,7 @@
 	int backflg = (int) request.getAttribute("backflg");
 	
 	String sno = "";
-	String gno = "";
+	String gno = (String)session.getAttribute("gno");
 	String menjo = "";
 	String henko = "";
 	String cc1 = "";
@@ -54,13 +54,14 @@
 	<div id="contents">
 	<h2>情報処理技術者試験<br />申込み画面</h2>
 			<form  method="get" action="./Kakunin">
+			<p style="text-align:center">申込みに必要な情報を入力してください</p>
 			<div align="center"/>
 		<div id="empty">
 			<div align="left">
 			<div id="a">
 			<table border ="1" align ="center" cellpadding ="10"><!--本文-->
 				<tr>
-				<th>学籍番号</th><th><input type="number" name="gno" maxlength="6"  style="font-size: 28px" value=<%= gno %>></input></th>
+				<th>学籍番号</th><th><%= gno %></th>
 				</tr>
 				<tr>
 				<th>一部免除申請番号</th><th><input type="number" name="menjo" style="font-size: 28px" value=<%= menjo %>></input></th>

@@ -60,16 +60,26 @@ public class Mosikomi extends HttpServlet {
 			rd.forward(request, response);
 			
 		}else if(sno.contentEquals("S004") || sno.contentEquals("S005") || sno.contentEquals("S006")) {
-			request.setAttribute("backflg", backflg);
 			request.setAttribute("sno", sno);
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Javan.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KJavan.jsp");
 			rd.forward(request, response);
+				/*
+				 * request.setAttribute("backflg", backflg); request.setAttribute("sno", sno);
+				 * RequestDispatcher rd =
+				 * request.getRequestDispatcher("/WEB-INF/jsp/Javan.jsp"); rd.forward(request,
+				 * response);
+				 */
 			
 		}else if(sno.contentEquals("S007") || sno.contentEquals("S008") || sno.contentEquals("S009") || sno.contentEquals("S010")) {
-			request.setAttribute("backflg", backflg);
 			request.setAttribute("sno", sno);
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Oracle.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KOracle.jsp");
 			rd.forward(request, response);
+				/*
+				 * request.setAttribute("backflg", backflg); request.setAttribute("sno", sno);
+				 * RequestDispatcher rd =
+				 * request.getRequestDispatcher("/WEB-INF/jsp/Oracle.jsp"); rd.forward(request,
+				 * response);
+				 */
 			
 		}
 		}

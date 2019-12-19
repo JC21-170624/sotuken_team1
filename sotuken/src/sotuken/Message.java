@@ -82,18 +82,22 @@ public class Message extends HttpServlet {
 				rd.forward(request, response);
 				
 			}else if(sno.contentEquals("S004") || sno.contentEquals("S005") || sno.contentEquals("S006")) {
-				request.setAttribute("backflg", backflg);
-				request.setAttribute("sno", sno);
-				request.setAttribute("gno", gno);
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Javan.jsp");
-				rd.forward(request, response);
+				response.sendRedirect("/sotuken/GSiken"); 
+					/*
+					 * request.setAttribute("backflg", backflg); request.setAttribute("sno", sno);
+					 * request.setAttribute("gno", gno); RequestDispatcher rd =
+					 * request.getRequestDispatcher("/WEB-INF/jsp/Javan.jsp"); rd.forward(request,
+					 * response);
+					 */
 				
 			}else if(sno.contentEquals("S007") || sno.contentEquals("S008") || sno.contentEquals("S009") || sno.contentEquals("S010")) {
-				request.setAttribute("backflg", backflg);
-				request.setAttribute("sno", sno);
-				request.setAttribute("gno", gno);
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Oracle.jsp");
-				rd.forward(request, response);
+				response.sendRedirect("/sotuken/GSiken");
+					/*
+					 * request.setAttribute("backflg", backflg); request.setAttribute("sno", sno);
+					 * request.setAttribute("gno", gno); RequestDispatcher rd =
+					 * request.getRequestDispatcher("/WEB-INF/jsp/Oracle.jsp"); rd.forward(request,
+					 * response);
+					 */
 				
 			}
 		}else {

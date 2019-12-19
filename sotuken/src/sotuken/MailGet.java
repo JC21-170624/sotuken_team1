@@ -35,7 +35,9 @@ public class MailGet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String mail = "170000@jc-21.jp";
+		String mail=request.getParameter("mail");
+//		response.getWriter().println("(Get)mail="+mail);
+		
 		String gno = mail.substring(0,6);
 		
 		HttpSession nokori = request.getSession(true);
