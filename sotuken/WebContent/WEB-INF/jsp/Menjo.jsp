@@ -56,7 +56,7 @@
 				<th>学籍番号</th><th><%= gno %></th>
 				</tr>
 				<tr>
-				<th>受験番号</th><th><input type="number" name="menjuken"  style="font-size: 28px"value=<%= menjuken %>></input></th>
+				<th>受験番号</th><th><input type="text" name="menjuken"  style="font-size: 28px"value=<%= menjuken %>></input></th>
 				</tr>
 				</table>
 			</div>

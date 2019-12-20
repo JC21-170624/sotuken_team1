@@ -64,7 +64,7 @@
 				<th>学籍番号</th><th><%= gno %></th>
 				</tr>
 				<tr>
-				<th>一部免除申請番号</th><th><input type="number" name="menjo" style="font-size: 28px" value=<%= menjo %>></input></th>
+				<th>一部免除申請番号</th><th><input type="text" name="menjo" style="font-size: 28px" value=<%= menjo %>></input></th>
 				</tr>
 				<tr>
 				<th>FE受験から変更する</th><th><input type="radio" name="henko" value="SGを受験する" <%= cc1 %>/>SGを受験する<input type="radio" name="henko" value="返金を希望する" <%= cc2 %>/>返金を希望する</th>

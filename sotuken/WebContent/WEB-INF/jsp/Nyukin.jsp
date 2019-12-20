@@ -28,7 +28,7 @@
 			<li><a href="./KHome">ホーム</a></li>
 			<li><a href="./KSiken">試験一覧</a></li>
 			<li><a href="./Mkanri">申込み管理</a></li>
-			<li><a href="./Login">ログアウト</a></li>
+			<li><a href="./KLogin">ログアウト</a></li>
 		</ul>
 	</div>
 	

@@ -29,9 +29,20 @@
 		<div align="center">
 			<p <%= style %>><%= message %></p>
 			<form method="post" action="./Password">
-			<th>パスワード：</th><th><input name="pass" type="text" style="font-size: 28px"></input></th>
+			<th>パスワード：</th><th><input name="pass" id="password" type="password" style="font-size: 28px"></input></th>
 			</br>
-			</br>
+			<p style="font-size:20px"><input type="checkbox" id="password-check"></input>パスワードを表示する</p>
+			<script>
+				 const pwd = document.getElementById('password');
+				 const pwdCheck = document.getElementById('password-check');
+				 pwdCheck.addEventListener('change', function() {
+				     if(pwdCheck.checked) {
+				         pwd.setAttribute('type', 'text');
+				     } else {
+				         pwd.setAttribute('type', 'password');
+				     }
+				 }, false);
+			 </script>
 			<button type="submit" name="klogin" style="font-size: 20px">ログイン</button>
 			</form>
 		</div>
