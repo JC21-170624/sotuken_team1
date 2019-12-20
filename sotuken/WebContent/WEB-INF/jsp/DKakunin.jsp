@@ -56,7 +56,7 @@
 			</div>
 		</div>
 		</div>
-		<input type="hidden" name="mno" value=<%= list[0] %>/>
+		<input type="hidden" name="mno" value=<%= list[0] %>></input>
 		</form>
 		<br/>
 		<br/>

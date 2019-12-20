@@ -41,6 +41,7 @@ public class Message4 extends HttpServlet {
 		
 		String dflg = "0";
 		String dchk = "0";
+		String m_only = "0";
 		
 		String message = "";
 		
@@ -75,6 +76,7 @@ public class Message4 extends HttpServlet {
 						}
 					}else {
 						dflg = "1";
+						m_only = "1";
 					}
 					
 					if(dflg.equals("1")) {
@@ -93,8 +95,14 @@ public class Message4 extends HttpServlet {
 						std2.setInt(1, mno);
 						int result2 = std2.executeUpdate();
 						
-						if(result > 0 && result2 > 0) {
-							dchk = "1";
+						if(m_only.equals("1")) {
+							if(result2 > 0) {
+								dchk = "1";
+							}
+						}else {
+							if(result > 0 && result2 > 0) {
+								dchk = "1";
+							}
 						}
 					}
 						

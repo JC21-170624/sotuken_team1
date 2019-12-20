@@ -63,7 +63,7 @@
 			</br>
 			<div align="right">
 			<div id="kensaku">
-			<button type="submit" name="reset" value="reset" style="font-size: 20px; width: 80px; heght: 40px;">リセット</button>
+			<button type="submit" name="reset" value="reset" style="font-size: 20px; width: 100px; heght: 40px;">リセット</button>
 			<button type="submit" name="reset" value="noreset" style="font-size: 20px; width: 80px; heght: 40px;">検索</button>
 			</div>
 			</div>

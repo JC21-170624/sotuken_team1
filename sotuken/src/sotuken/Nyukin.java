@@ -90,7 +90,7 @@ public class Nyukin extends HttpServlet {
 						
 						}catch(SQLException | ClassNotFoundException e) {e.printStackTrace();}
 				
-				}else { // 確認するサーブレットへ飛ばす
+				}else { // 削除を確認するサーブレットへ飛ばす
 					
 					// 該当するオラクルデータベースに対して、SELECT文を実行する。結果は変数「rs」に入れている。
 					try {
