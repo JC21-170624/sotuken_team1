@@ -80,7 +80,7 @@
 		<div align="center">
 		<div id="empty">
 			<div align="left">
-			<div id="a">
+			<div id="b">
 				<table border ="1" align ="left" cellpadding="6"><!--本文-->
 				<caption><!--テーブル名--></caption>
 					<tr>

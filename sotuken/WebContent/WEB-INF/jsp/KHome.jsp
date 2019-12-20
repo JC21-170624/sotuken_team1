@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>検定申込み窓口簡略化システム</title>
 <link href="style_khome.css" rel="stylesheet" type="text/css" />
-<link href="designstyle.css" rel="stylesheet" type="text/css" />
+<link href="style.khomedesign.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -73,7 +73,7 @@
 		<div align="center">
 		<div id="empty">
 			<div align="left">
-			<div id="a">
+			<div id="b">
 			<h4 style="text-align: left">申込みと入金を完了し、受験を控えている学生のリスト</h4>
 				<table border ="1" align ="left" cellpadding="10"><!--本文-->
 				<caption><!--テーブル名--></caption>

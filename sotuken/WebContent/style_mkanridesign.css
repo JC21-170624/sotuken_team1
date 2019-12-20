@@ -40,13 +40,29 @@ h3{
 }
 table{
 	font-size: 20px;
+	border-style: solid;
+	border-collapse: collapse; 
+	border: 1px solid #000000;
 }
+#b table td{
+	border: 1px solid #000000;
+}
+#b table th{
+	background-color: #FAF0E6;
+	border: 1px solid #000000;
+}
+#b table tr:nth-child(odd){
+	background-color: #eee
+}
+
 a:link, a:visited, a:active {
   	color: blue;
 	font-size: 20px;
+	text-decoration: none;
 }
 a:hover{
 	color: red;
+	text-decoration: underline;
 }
 p{
 	font-size: 30px;
