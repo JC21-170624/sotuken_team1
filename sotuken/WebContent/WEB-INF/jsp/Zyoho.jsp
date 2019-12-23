@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>検定申込み窓口簡略化システム</title>
 <link href="style_moshikomi.css" rel="stylesheet" type="text/css" />
-<link href="designstyle.css" rel="stylesheet" type="text/css" />
+<link href="mosikomidesignstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <%
@@ -43,13 +43,12 @@
 	<h1>検定申込み窓口簡略化システム</h1>
 	<div id="header">	
 		<div id="nav">
-		<h3>メニュー</h3>
-			<ul>
-  			<li><a href="./GHome">ホーム</a></li>
-  			<li><a href="./GSiken">試験一覧</a></li>
-  			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
-			</ul>
-		</div>
+		<ul>
+			<li style = "font-size:23px;list-style: none;"><b>Hello<br/><%= gno %></b></li>
+			<li><a href="./GHome">ホーム</a></li>
+			<li><a href="./GSiken">試験一覧</a></li>
+			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
+		</ul>
 	</div>
 	<div id="contents">
 	<h2>情報処理技術者試験<br />申込み画面</h2>
@@ -61,13 +60,13 @@
 			<div id="a">
 			<table border ="1" align ="center" cellpadding ="10"><!--本文-->
 				<tr>
-				<th>学籍番号</th><th><%= gno %></th>
+				<th>学籍番号</th><td><%= gno %></td>
 				</tr>
 				<tr>
-				<th>一部免除申請番号</th><th><input type="text" name="menjo" style="font-size: 28px" value=<%= menjo %>></input></th>
+				<th>一部免除申請番号</th><td><input type="text" name="menjo" style="font-size: 28px" value=<%= menjo %>></input></td>
 				</tr>
 				<tr>
-				<th>FE受験から変更する</th><th><input type="radio" name="henko" value="SGを受験する" <%= cc1 %>/>SGを受験する<input type="radio" name="henko" value="返金を希望する" <%= cc2 %>/>返金を希望する</th>
+				<th>FE受験から変更する</th><td><input type="radio" name="henko" value="SGを受験する" <%= cc1 %>/>SGを受験する<input type="radio" name="henko" value="返金を希望する" <%= cc2 %>/>返金を希望する</td>
 				</tr>
 				</table>
 			</div>

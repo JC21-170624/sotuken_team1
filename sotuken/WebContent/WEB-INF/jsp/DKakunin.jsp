@@ -47,6 +47,7 @@
 				</table>
 			</div>
 			</div>
+			<div id ="b">
 			<br/>
 			<p style="text-align: center">上記の申込みの情報を削除してもよろしいですか？</p>
 			<br/>

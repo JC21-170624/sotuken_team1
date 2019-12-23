@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>検定申込み窓口簡略化システム</title>
 <link href="style_kakunin.css" rel="stylesheet" type="text/css" />
-<link href="designstyle.css" rel="stylesheet" type="text/css" />
+<link href="mosikomidesignstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -22,13 +22,13 @@
 	<h1>検定申込み窓口簡略化システム</h1>
 	<div id="header" />	
 		<div id="nav">
-		<h3>メニュー</h3>
-			<ul>
-  			<li><a href="./GHome">ホーム</a></li>
-  			<li><a href="./GSiken">試験一覧</a></li>
-  			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
-			</ul>
-		</div>
+		<ul>
+			<li style = "font-size:23px;list-style: none;"><b>Hello<br/><%= gno %></b></li>
+			<li><a href="./GHome">ホーム</a></li>
+			<li><a href="./GSiken">試験一覧</a></li>
+			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
+		</ul>
+	</div>
 	<div id="contents">
 	<h2>確認画面</h2>
 	<form  method="post" action="./Message">
@@ -39,10 +39,10 @@
 			<div id="a">
 			<table border ="1" align ="center" cellpadding="10"><!--本文-->
 				<tr>
-				<th>学籍番号</th><th><%= gno %></th>
+				<th>学籍番号</th><td><%= gno %></td>
 				</tr>
 				<tr>
-				<th>受験番号</th><th><%= menjuken %></th>
+				<th>受験番号</th><td><%= menjuken %></td>
 				</tr>
 				</table>
 			</div>

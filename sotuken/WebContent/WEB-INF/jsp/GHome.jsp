@@ -10,13 +10,16 @@
 <link href="designstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<%
+	String gno = (String)session.getAttribute("gno");
+%>
 <div id="container">
 	<div id="header">
-		<h1>検定申込み窓口簡略化システム</h1>
+		<div id= "title"><h1>検定申込み窓口簡略化システム</h1></div>
 	</div>
 	<div id="nav">
-		<h3>メニュー</h3>
 		<ul>
+			<li style = "font-size:23px;list-style: none;"><b>Hello<br/><%= gno %></b></li>
 			<li><a href="./GHome">ホーム</a></li>
 			<li><a href="./GSiken">試験一覧</a></li>
 			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>

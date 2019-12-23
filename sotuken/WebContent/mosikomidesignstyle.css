@@ -52,9 +52,6 @@ table th{
 	background-color: #FAF0E6;
 	border: 1px solid #000000;
 }
-table tr:nth-child(odd){
-  background-color: #eee
-}
 
 a:link, a:visited, a:active {
   	color: blue;

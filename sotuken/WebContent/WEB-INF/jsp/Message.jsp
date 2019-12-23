@@ -13,6 +13,7 @@
 
 <%
 	String message = (String) request.getAttribute("message");
+	String gno = (String)session.getAttribute("gno");
 %>
 
 <div id="container">
@@ -20,11 +21,11 @@
 		<h1>検定申込み窓口簡略化システム</h1>
 	</div>
 	<div id="nav">
-		<h3>メニュー</h3>
 		<ul>
+			<li style = "font-size:23px;list-style: none;"><b>Hello<br/><%= gno %></b></li>
 			<li><a href="./GHome">ホーム</a></li>
-  			<li><a href="./GSiken">試験一覧</a></li>
-  			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
+			<li><a href="./GSiken">試験一覧</a></li>
+			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
 		</ul>
 	</div>
 	<div id="contents">

@@ -13,6 +13,7 @@
 
 <% 
 	String[] list = (String[]) request.getAttribute("list");
+	String gno = (String)session.getAttribute("gno");
 %>
 
 
@@ -20,17 +21,19 @@
 	<h1>検定申込み窓口簡略化システム</h1>
 	<div id="header" />	
 		<div id="nav">
-		<h3>メニュー</h3>
-			<ul>
-  			<li><a href="./GHome">ホーム</a></li>
-  			<li><a href="./GSiken">試験一覧</a></li>
-  			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
-			</ul>
-		</div>
+		<ul>
+			<li style = "font-size:23px;list-style: none;"><b>Hello<br/><%= gno %></b></li>
+			<li><a href="./GHome">ホーム</a></li>
+			<li><a href="./GSiken">試験一覧</a></li>
+			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
+		</ul>
+	</div>
 	<div id="contents">
 	<h2>受験後処理確認</h2>
 	<form  method="post" action="./Message3">
-			<div align="center">
+	<P style="text-align: center">以上の試験を受験し終えた場合は受験後処理ボタンをクリックしてください。</P>
+	<br/>
+		<div align="center">
 		<div id="empty">
 			<div align="left">
 			<div id="a">
@@ -42,16 +45,14 @@
 				<td><%= list[1] %></td><td><%= list[2] %></td><td><%= list[3] %></td><td><%= list[4] %></td>
 				</tr>
 				</table>
+				<br/>
+				<div style="float: left"><button type="submit" name="jukengo" value="back" style="font-size: 20px">戻る</button></div>
+				<div style="text-align: right"><button type="submit" name="jukengo" value="go" style="font-size: 20px">受験後処理</button></div>　
+			<br/>
 			</div>
 			</div>
 			<input type="hidden" name="nno" value=<%= list[0] %>></input>
 			<br />
-			<P style="text-align: center">以上の試験を受験し終えた場合は受験後処理ボタンをクリックしてください。</P>
-			<br/>
-				<div style="float: left"><button type="submit" name="jukengo" value="back" style="font-size: 20px">戻る</button></div>
-				<div style="text-align: right"><button type="submit" name="jukengo" value="go" style="font-size: 20px">受験後処理</button></div>　
-			<br/>
-		
 		</div>
 		</div>
 	</form>
