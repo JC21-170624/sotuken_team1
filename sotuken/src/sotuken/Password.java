@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Password
@@ -31,6 +32,8 @@ public class Password extends HttpServlet {
 		String pass = request.getParameter("pass");
 		
 		if(pass.equals("admin")) {
+			HttpSession session = request.getSession(true);
+			session.setAttribute("login_token", "login_token");
 			response.sendRedirect("/sotuken/KHome");
 		}else {
 			request.setAttribute("flg", "1");

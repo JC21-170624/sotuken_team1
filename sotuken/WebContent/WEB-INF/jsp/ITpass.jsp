@@ -1,3 +1,4 @@
+<%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -21,6 +22,10 @@
 	String year = "";
 	String month = "";
 	
+	Calendar cal = Calendar.getInstance();
+    int yeari = cal.get(Calendar.YEAR);
+    int[] years = {yeari,yeari+1,yeari+2,yeari+3,yeari+4,yeari+5};
+	
 	if(backflg == 0){
 		sno = (String) request.getAttribute("sno");
 	}else if(backflg == 1){
@@ -28,19 +33,20 @@
 		gno = (String) request.getAttribute("gno");
 		ydate = (String) request.getAttribute("ydate");
 		year = ydate.substring(0,4);
+		int yeari2 = Integer.parseInt(year); // 戻りの遷移で受け取った受験予定年月から年を取得しintに変換
 		month = ydate.substring(5);
 		
-		if(year.equals("2019")){
+		if(yeari2 == years[0]){
 			ccy[0] = "Selected";
-		}else if(year.equals("2020")){
+		}else if(yeari2 == years[1]){
 			ccy[1] = "Selected";
-		}else if(year.equals("2021")){
+		}else if(yeari2 == years[2]){
 			ccy[2] = "Selected";
-		}else if(year.equals("2022")){
+		}else if(yeari2 == years[3]){
 			ccy[3] = "Selected";
-		}else if(year.equals("2023")){
+		}else if(yeari2 == years[4]){
 			ccy[4] = "Selected";
-		}else if(year.equals("2024")){
+		}else if(yeari2 == years[5]){
 			ccy[5] = "Selected";
 		}
 		
@@ -85,7 +91,7 @@
 	</div>
 	<div id="contents">
 		<h2>ITパスポート試験<br />申込み画面</h2>
-		<form method="get" action="./Kakunin">
+		<form method="post" action="./Kakunin">
 		<p style="text-align:center">申込みに必要な情報を入力してください</p>
 		<div align="center">
 		<div id="empty">
@@ -96,12 +102,12 @@
 						<th>学籍番号</th>	<th><%= gno %></th>
 					</tr>
 					<tr>
-						<th>受験予定年月</th>	<td><select name ="year" style="font-size: 28px" ><option value ="2019" <%= ccy[0] %>>2019</option>
-																	 <option value ="2020" <%= ccy[1] %>>2020</option>
-																	 <option value ="2021" <%= ccy[2] %>>2021</option>
-																	 <option value ="2022" <%= ccy[3] %>>2022</option>
-																	 <option value ="2023" <%= ccy[4] %>>2023</option>
-																	 <option value ="2024" <%= ccy[5] %>>2024</option>
+						<th>受験予定年月</th>	<td><select name ="year" style="font-size: 28px" ><option value ="<%= years[0] %>" <%= ccy[0] %>><%= years[0] %></option>
+																	 <option value ="<%= years[1] %>" <%= ccy[1] %>><%= years[1] %></option>
+																	 <option value ="<%= years[2] %>" <%= ccy[2] %>><%= years[2] %></option>
+																	 <option value ="<%= years[3] %>" <%= ccy[3] %>><%= years[3] %></option>
+																	 <option value ="<%= years[4] %>" <%= ccy[4] %>><%= years[4] %></option>
+																	 <option value ="<%= years[5] %>" <%= ccy[5] %>><%= years[5] %></option>
 												 </select>年
 																	 
 												<select name ="month" style="font-size: 28px" ><option value ="1" <%= ccm[0] %>>1</option>
@@ -128,7 +134,7 @@
 			</div>
 		</div>
 		</div>
-		<input type="hidden" name="sno" value=<%= sno %>>
+		<input type="hidden" name="sno" value=<%= sno %>></input>
 		<input type="hidden" name="menjo" value="-">
 		<input type="hidden" name="henko" value="-">
 		<input type="hidden" name="menjuken" value="-">

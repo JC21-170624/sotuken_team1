@@ -29,7 +29,7 @@
 		</div>
 	<div id="contents">
 	<h2>受験後処理確認</h2>
-	<form  method="get" action="./Message3">
+	<form  method="post" action="./Message3">
 			<div align="center">
 		<div id="empty">
 			<div align="left">

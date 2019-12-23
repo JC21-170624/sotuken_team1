@@ -38,7 +38,7 @@
 	<div id="contents">
 		<h2>Javaプログラミング能力認定試験</br>
 		申込み画面</h2>
-		<form method="get" action="./Kakunin">
+		<form method="post" action="./Kakunin">
 		<p style="text-align:center">申込みに必要な情報を入力してください</p>
 		<div align="center">
 		<div id="empty">

@@ -28,7 +28,7 @@ public class Kakunin extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession(false);
 		if(session == null) {
@@ -61,11 +61,12 @@ public class Kakunin extends HttpServlet {
 				request.setAttribute("menjuken", menjuken);
 				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Menjo.jsp");
 				rd.forward(request, response);
+			}else {
+				request.setAttribute("sno", sno);
+				request.setAttribute("menjuken", menjuken);
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KMenjo.jsp");
+				rd.forward(request, response);
 			}
-			request.setAttribute("sno", sno);
-			request.setAttribute("menjuken", menjuken);
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KMenjo.jsp");
-			rd.forward(request, response);
 			
 		}else if(sno.contentEquals("S003")) {
 			request.setAttribute("sno", sno);

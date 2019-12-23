@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Mkanri
@@ -34,7 +35,13 @@ public class Mkanri extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 該当するオラクルデータベースに対して、SELECT文を実行する。結果は変数「rs」に入れている。
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			response.sendRedirect("/sotuken/KLogin"); 
+		}else if(session.getAttribute("login_token") == null) {
+			response.sendRedirect("/sotuken/KLogin"); 
+		}else {
+				// 該当するオラクルデータベースに対して、SELECT文を実行する。結果は変数「rs」に入れている。
 				try {
 					final String driverName = "oracle.jdbc.driver.OracleDriver";
 					final String url = "jdbc:oracle:thin:@192.168.54.191:1521/orcl";
@@ -75,6 +82,7 @@ public class Mkanri extends HttpServlet {
 					rd.forward(request, response);
 					
 					}catch(SQLException | ClassNotFoundException e) {e.printStackTrace();}
+		}
 	}
 
 }

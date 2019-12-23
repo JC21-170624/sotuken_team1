@@ -45,7 +45,7 @@
 			</div>
 	<div id="contents">
 	<h2>基本情報技術者試験午前免除修了試験用<br />申込み画面</h2>
-	<form method="get" action="./Kakunin">
+	<form method="post" action="./Kakunin">
 		<%= message %>
 		<div align="center">
 		<div id="empty">

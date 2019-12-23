@@ -39,10 +39,12 @@ public class MailGet extends HttpServlet {
 //		String mail="170000@jc-21.jp"; 元々デバッグのために使っていたもの
 		
 		if(request.getParameter("mail") == null) {
+			HttpSession nokori = request.getSession(true);
+			nokori.invalidate();
 			response.sendRedirect("/sotuken/Login");
 		}else {
 			String mail=request.getParameter("mail");
-	//		response.getWriter().println("(Get)mail="+mail);
+//			response.getWriter().println("(Get)mail="+mail);
 			String gno = mail.substring(0,6); 
 			
 			HttpSession nokori = request.getSession(true);

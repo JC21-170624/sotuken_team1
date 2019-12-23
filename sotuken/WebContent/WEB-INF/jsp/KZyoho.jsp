@@ -32,7 +32,7 @@
 		</div>
 	<div id="contents">
 	<h2>確認画面</h2>
-	<form  method="get" action="./Message">
+	<form  method="post" action="./Message">
 		<p style="text-align:center">以下の内容で申込みます。よろしければ確定ボタンを押してください。</p>
 			<div align="center">
 		<div id="empty">

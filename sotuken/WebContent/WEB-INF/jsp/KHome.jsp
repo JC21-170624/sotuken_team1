@@ -25,7 +25,7 @@
 			<li><a href="./KHome">ホーム</a></li>
 			<li><a href="./KSiken">試験一覧</a></li>
 			<li><a href="./Mkanri">申込み管理</a></li>
-			<li><a href="./KLogin">ログアウト</a></li>
+			<li><a href="./KLogout">ログアウト</a></li>
 		</ul>
 	</div>
 	<div id="contents">
@@ -63,8 +63,8 @@
 			</br>
 			<div align="right">
 			<div id="kensaku">
-			<button type="submit" name="reset" value="reset" style="font-size: 20px; width: 100px; heght: 40px;">リセット</button>
 			<button type="submit" name="reset" value="noreset" style="font-size: 20px; width: 80px; heght: 40px;">検索</button>
+			<button type="submit" name="reset" value="reset" style="font-size: 20px; width: 100px; heght: 40px;">リセット</button>
 			</div>
 			</div>
 		</div>

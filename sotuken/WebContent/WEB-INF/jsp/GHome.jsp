@@ -24,7 +24,7 @@
 	</div>
 	<div id="contents">
 		<h2>ホーム</h2>
-		<form method="get" action="./JukenKakunin">
+		<form method="post" action="./JukenKakunin">
 		<div align="center">
 		<div id="empty1">
 		<div align="left">

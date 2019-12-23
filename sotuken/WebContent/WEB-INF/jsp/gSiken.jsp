@@ -33,7 +33,7 @@
 					int loopCount = 0; /* for文の中で、今何回目のループなのか調べている変数 */
 					String cc = "";
 				%>
-				<form method="get" action="./Mosikomi">
+				<form method="post" action="./Mosikomi">
 				<table border ="1" align ="left"  cellpadding ="10"><!--本文-->
 					<tr>
 						<th></th><th>試験名</th><th>受け付け期間</th><th>試験日</th><th>料金</th><!--<th></th>で増やす-->

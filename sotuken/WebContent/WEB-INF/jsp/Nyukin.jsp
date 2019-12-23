@@ -1,4 +1,4 @@
-<%@page import="java.util.List"%>
+<%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -16,6 +16,10 @@
 	String[] list = (String[])request.getAttribute("list");
 	int bchk = (int)request.getAttribute("bchk");
 	int mno = (int)request.getAttribute("mno");
+	
+	Calendar cal = Calendar.getInstance();
+    int yeari = cal.get(Calendar.YEAR);
+    int[] years = {yeari,yeari+1,yeari+2,yeari+3,yeari+4,yeari+5};
 %>
 
 <div id="container">
@@ -28,7 +32,7 @@
 			<li><a href="./KHome">ホーム</a></li>
 			<li><a href="./KSiken">試験一覧</a></li>
 			<li><a href="./Mkanri">申込み管理</a></li>
-			<li><a href="./KLogin">ログアウト</a></li>
+			<li><a href="./KLogout">ログアウト</a></li>
 		</ul>
 	</div>
 	
@@ -71,18 +75,12 @@
 						<td>
 						<select name="year">
 						<option value="-">-</option>
-						<option value="2019">2019</option>
-						<option value="2020">2020</option>
-						<option value="2021">2021</option>
-						<option value="2022">2022</option>
-						<option value="2023">2023</option>
-						<option value="2024">2024</option>
-						<option value="2025">2025</option>
-						<option value="2026">2026</option>
-						<option value="2027">2027</option>
-						<option value="2028">2028</option>
-						<option value="2029">2029</option>
-						<option value="2030">2030</option>
+						<option value=<%= years[0] %>><%= years[0] %></option>
+						<option value=<%= years[1] %>><%= years[1] %></option>
+						<option value=<%= years[2] %>><%= years[2] %></option>
+						<option value=<%= years[3] %>><%= years[3] %></option>
+						<option value=<%= years[4] %>><%= years[4] %></option>
+						<option value=<%= years[5] %>><%= years[5] %></option>
 						</select>
 						年</td>
 						<td><select name="month">
