@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>検定申込み窓口簡略化システム</title>
 <link href="style_moshikomi.css" rel="stylesheet" type="text/css" />
-<link href="designstyle.css" rel="stylesheet" type="text/css" />
+<link href="mosikomidesignstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <%
@@ -28,11 +28,11 @@
 		<h1>検定申込み窓口簡略化システム</h1>
 	</div>
 	<div id="nav">
-		<h3>メニュー</h3>
 		<ul>
+			<li style = "font-size:23px;list-style: none;"><b>Hello<br/><%= gno %></b></li>
 			<li><a href="./GHome">ホーム</a></li>
-  			<li><a href="./GSiken">試験一覧</a></li>
-  			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
+			<li><a href="./GSiken">試験一覧</a></li>
+			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
 		</ul>
 	</div>
 	<div id="contents">
@@ -47,7 +47,7 @@
 				<table border ="1" align ="left" cellpadding ="10"><!--本文-->
 				<caption><!--テーブル名--></caption>
 					<tr>
-						<th>学籍番号</th><th><%= gno %></th><!--<th></th>で増やす-->
+						<th>学籍番号</th><td><%= gno %></td><!--<th></th>で増やす-->
 					</tr>
 				</table>
 			</div>

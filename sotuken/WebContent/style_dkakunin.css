@@ -39,7 +39,7 @@ a{
 #empty {
 	display: table;
 }
-#a {
+#a,#b {
 	display: table;
 }
 table {
