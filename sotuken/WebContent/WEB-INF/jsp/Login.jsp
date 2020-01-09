@@ -26,7 +26,6 @@
 		<div align="center">
 			<p style="font-size: 20px"><%= message %></p>
 			<a href="https://192.168.54.212/r01JC21Login/msLoginDirect?id=1111">ログイン</a><br />
-			<a href="./KHome">管理者ログイン</a>
 		</div>
 	</div>
 	
