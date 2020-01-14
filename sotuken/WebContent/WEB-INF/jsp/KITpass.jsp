@@ -26,14 +26,14 @@
 			<li style = "font-size:23px;list-style: none;"><b>Hello<br/><%= gno %></b></li>
 			<li><a href="./GHome">ホーム</a></li>
 			<li><a href="./GSiken">試験一覧</a></li>
-			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1013">ログアウト</a></li>
+			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
 		</ul>
 	</div>
 	<div id="contents">
 	<h2>確認画面</h2>
 	<form  method="post" action="./Message">
 	<p style="text-align:center">以下の内容で申込みます。よろしければ確定ボタンを押してください。</p>
-			<div align="center">
+		<div align="center">
 		<div id="empty">
 			<div align="left">
 			<div id="a">

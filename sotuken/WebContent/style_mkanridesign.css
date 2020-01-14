@@ -44,10 +44,10 @@ table{
 	border-collapse: collapse; 
 	border: 1px solid #000000;
 }
-#b table td{
+#a table td,#b table td{
 	border: 1px solid #000000;
 }
-#b table th{
+#a table th,#b table th{
 	background-color: #FAF0E6;
 	border: 1px solid #000000;
 }

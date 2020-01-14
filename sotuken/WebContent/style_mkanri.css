@@ -35,10 +35,13 @@ a{
 	margin-left: 180px;/*marginを150から180に変更（変更かずき）*/
 	padding-bottom: 10em;
 }
-#empty {
+#empty1,#empty2 {
 	display: table;
+	border-style: dotted;
+	border-width: 1px;
+	padding: 10px;
 }
-#a {
+#a,#b {
 	display: table;
 }
 table {
