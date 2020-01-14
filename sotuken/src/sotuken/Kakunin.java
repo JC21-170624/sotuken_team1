@@ -32,9 +32,9 @@ public class Kakunin extends HttpServlet {
 		
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else if(session.getAttribute("gno") == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else {
 		
 		String sno = request.getParameter("sno");

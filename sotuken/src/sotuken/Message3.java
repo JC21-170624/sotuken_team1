@@ -38,9 +38,9 @@ public class Message3 extends HttpServlet {
 		
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else if(session.getAttribute("gno") == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else {
 			
 		int nno = Integer.parseInt(request.getParameter("nno"));
@@ -49,7 +49,7 @@ public class Message3 extends HttpServlet {
 		String message = "";
 		
 		if(jukengo.equals("back")) {
-			response.sendRedirect("/sotuken/GHome");
+			response.sendRedirect("/KenteiMosikomi/GHome");
 		}else {
 			
 			try {

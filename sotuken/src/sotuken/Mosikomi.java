@@ -31,9 +31,9 @@ public class Mosikomi extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else if(session.getAttribute("gno") == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else {
 			
 		String sno = request.getParameter("sno");

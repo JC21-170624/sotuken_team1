@@ -37,9 +37,9 @@ public class Search_KHome extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else if(session.getAttribute("login_token") == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else {
 			String gno = request.getParameter("gno");
 			String sno = request.getParameter("sno");

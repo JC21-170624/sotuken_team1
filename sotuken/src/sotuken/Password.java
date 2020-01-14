@@ -34,7 +34,7 @@ public class Password extends HttpServlet {
 		if(pass.equals("admin")) {
 			HttpSession session = request.getSession(true);
 			session.setAttribute("login_token", "login_token");
-			response.sendRedirect("/sotuken/KHome");
+			response.sendRedirect("/KenteiMosikomi/KHome");
 		}else {
 			request.setAttribute("flg", "1");
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/KLogin.jsp");

@@ -38,9 +38,9 @@ public class Message extends HttpServlet {
 		
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else if(session.getAttribute("gno") == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else {
 			
 		String sno = request.getParameter("sno");
@@ -82,7 +82,7 @@ public class Message extends HttpServlet {
 				rd.forward(request, response);
 				
 			}else if(sno.contentEquals("S004") || sno.contentEquals("S005") || sno.contentEquals("S006")) {
-				response.sendRedirect("/sotuken/GSiken"); 
+				response.sendRedirect("/KenteiMosikomi/GSiken"); 
 					/*
 					 * request.setAttribute("backflg", backflg); request.setAttribute("sno", sno);
 					 * request.setAttribute("gno", gno); RequestDispatcher rd =
@@ -91,7 +91,7 @@ public class Message extends HttpServlet {
 					 */
 				
 			}else if(sno.contentEquals("S007") || sno.contentEquals("S008") || sno.contentEquals("S009") || sno.contentEquals("S010")) {
-				response.sendRedirect("/sotuken/GSiken");
+				response.sendRedirect("/KenteiMosikomi/GSiken");
 					/*
 					 * request.setAttribute("backflg", backflg); request.setAttribute("sno", sno);
 					 * request.setAttribute("gno", gno); RequestDispatcher rd =
@@ -164,4 +164,3 @@ public class Message extends HttpServlet {
 		
 	}
 }
-

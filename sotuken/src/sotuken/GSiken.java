@@ -38,9 +38,9 @@ public class GSiken extends HttpServlet {
 		
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else if(session.getAttribute("gno") == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else {
 			
 		// 該当するオラクルデータベースに対して、SELECT文を実行する。結果は変数「rs」に入れている。

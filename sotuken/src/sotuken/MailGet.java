@@ -41,7 +41,7 @@ public class MailGet extends HttpServlet {
 		if(request.getParameter("mail") == null) {
 			HttpSession nokori = request.getSession(true);
 			nokori.invalidate();
-			response.sendRedirect("/sotuken/Login");
+			response.sendRedirect("./Login");
 		}else {
 			String mail=request.getParameter("mail");
 //			response.getWriter().println("(Get)mail="+mail);
@@ -86,7 +86,7 @@ public class MailGet extends HttpServlet {
 				
 				// 新規ユーザー登録がうまくいかなかった時のみを検知して、ログイン画面にもう一度飛ばす
 				if(result > 0) {
-					response.sendRedirect("/sotuken/GHome");
+					response.sendRedirect("/KenteiMosikomi/GHome");
 				}else {
 					request.setAttribute("inschk", "1");
 					RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/Login.jsp");

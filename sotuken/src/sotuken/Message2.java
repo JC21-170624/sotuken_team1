@@ -37,9 +37,9 @@ public class Message2 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else if(session.getAttribute("login_token") == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else {
 			int mno = Integer.parseInt(request.getParameter("mno"));
 			String jukenno = request.getParameter("juken_no");

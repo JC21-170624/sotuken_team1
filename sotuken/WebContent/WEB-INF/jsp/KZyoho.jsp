@@ -16,6 +16,10 @@
 	String sno = (String)request.getAttribute("sno");
 	String menjo = (String)request.getAttribute("menjo");
 	String henko = (String)request.getAttribute("henko");
+	String message = "SGを受験する";
+	if(henko.equals("mo")){
+		message = "返金を希望する";
+	}
 %>
 
 
@@ -27,7 +31,7 @@
 			<li style = "font-size:23px;list-style: none;"><b>Hello<br/><%= gno %></b></li>
 			<li><a href="./GHome">ホーム</a></li>
 			<li><a href="./GSiken">試験一覧</a></li>
-			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1111">ログアウト</a></li>
+			<li><a href="https://192.168.54.212/r01JC21Login/msLogout?id=1013">ログアウト</a></li>
 		</ul>
 	</div>
 	<div id="contents">
@@ -46,7 +50,7 @@
 				<th>一部免除申請番号</th><td><%= menjo %></td>
 				</tr>
 				<tr>
-				<th>FE受験から変更する</th><td><%= henko %></td>
+				<th>FE受験から変更する</th><td><%= message %></td>
 				</tr>
 				</table>
 			</div>

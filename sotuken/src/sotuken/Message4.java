@@ -36,9 +36,9 @@ public class Message4 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else if(session.getAttribute("login_token") == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else {
 		
 			String mnoStr = request.getParameter("mno");
@@ -53,7 +53,7 @@ public class Message4 extends HttpServlet {
 			String message = "";
 			
 			if(mnoStr.length() == 0) {
-				response.sendRedirect("/sotuken/Mkanri");
+				response.sendRedirect("/KenteiMosikomi/Mkanri");
 			}else {
 				mno = Integer.parseInt(mnoStr);
 				
@@ -130,7 +130,7 @@ public class Message4 extends HttpServlet {
 				
 				}else {
 					
-					response.sendRedirect("/sotuken/Mkanri");
+					response.sendRedirect("/KenteiMosikomi/Mkanri");
 					
 				}
 			}

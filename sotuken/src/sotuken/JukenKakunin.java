@@ -38,16 +38,16 @@ public class JukenKakunin extends HttpServlet {
 		
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else if(session.getAttribute("gno") == null) {
-			response.sendRedirect("/sotuken/Login"); 
+			response.sendRedirect("/KenteiMosikomi/Login"); 
 		}else {
 			
 		String nnoStr = request.getParameter("nno");
 		int nno;
 		
 		if(nnoStr.length() == 0) {
-			response.sendRedirect("/sotuken/GHome");
+			response.sendRedirect("/KenteiMosikomi/GHome");
 		}else {
 			nno = Integer.parseInt(nnoStr);
 		

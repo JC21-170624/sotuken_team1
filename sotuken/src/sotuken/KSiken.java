@@ -37,9 +37,9 @@ public class KSiken extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else if(session.getAttribute("login_token") == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else {
 				// 該当するオラクルデータベースに対して、SELECT文を実行する。結果は変数「rs」に入れている。
 				try {

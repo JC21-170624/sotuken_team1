@@ -6,8 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>検定申込み窓口簡略化システム</title>
-<link href="style_login.css" rel="stylesheet" type="text/css" />
-<link href="logindesignstyle.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="style_login.css"/>
+<link rel="stylesheet" type="text/css" href="logindesignstyle.css"/>
 </head>
 <body>
 <%
@@ -25,7 +25,7 @@
 	<div id="login">
 		<div align="center">
 			<p style="font-size: 20px"><%= message %></p>
-			<a href="https://192.168.54.212/r01JC21Login/msLoginDirect?id=1111">ログイン</a><br />
+			<a href="https://192.168.54.212/r01JC21Login/msLoginDirect?id=1013">ログイン</a><br />
 		</div>
 	</div>
 	

@@ -37,9 +37,9 @@ public class Nyukin extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else if(session.getAttribute("login_token") == null) {
-			response.sendRedirect("/sotuken/KLogin"); 
+			response.sendRedirect("/KenteiMosikomi/KLogin"); 
 		}else {
 			String mnoStr = request.getParameter("mno");
 			int mno;
@@ -47,7 +47,7 @@ public class Nyukin extends HttpServlet {
 			String mkanri = request.getParameter("mkanri");
 			
 			if(mnoStr.length() == 0) {
-				response.sendRedirect("/sotuken/Mkanri");
+				response.sendRedirect("/KenteiMosikomi/Mkanri");
 			}else {
 					mno = Integer.parseInt(mnoStr);
 					
