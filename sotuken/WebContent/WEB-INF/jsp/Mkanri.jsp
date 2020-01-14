@@ -34,13 +34,13 @@
 		<h2>申込み管理</h2>
 		<form method="get" action="./Search_Mkanri">
 		<div align="center">
-		<div id="empty">
+		<div id="empty1">
 			<div align="left">
 			<div id="a">
 				<table border ="1" align ="left" cellpadding="10"><!--本文-->
 				<caption><!--テーブル名--></caption>
 					<tr>
-						<th>学籍番号</th><td><input type="number" maxlength="6" name="gno" style="font-size: 28px"></td>
+						<th>学籍番号</th><td><input type="number" maxlength="6" name="gno" style="font-size: 28px" /></td>
 					</tr>
 					<tr>
 						<th>試験名</th><td>
@@ -62,23 +62,16 @@
 				</table>
 			</div>
 			</div>
-			</br>
-			<div align="right">
-			<div id="kensaku">
-			<button type="submit" name="reset" value="noreset" style="font-size: 20px; width: 120px; heght: 40px;">検索</button>
-			<button type="submit" name="reset" value="reset" style="font-size: 20px; width: 120px; heght: 40px;">リセット</button>
-			</form>
-			<form method="get" action="./Nyukin">
-			<br />
-			<button type="submit" name="mkanri" value="money" style="font-size: 20px; width: 120px; heght: 40px;">入金・登録</button>
-			<button type="submit" name="mkanri" value="delete" style="font-size: 20px; width: 120px; heght: 40px;">削除</button>
-			</div>
-			</div>
+			<br/>
+			<div style="float: left"><button type="submit" name="reset" value="reset" style="font-size: 20px; width: 120px; heght: 40px;">リセット</button></div>
+			<div style="text-align: right"><button type="submit" name="reset" value="noreset" style="font-size: 20px; width: 120px; heght: 40px;">検索</button></div>
 		</div>
 		</div>
+		</form>
 		<br />
+		<form method="get" action="./Nyukin">
 		<div align="center">
-		<div id="empty">
+		<div id="empty2">
 			<div align="left">
 			<div id="b">
 				<table border ="1" align ="left" cellpadding="6"><!--本文-->
@@ -95,7 +88,7 @@
 						}
 					%>
 					<tr>
-						<td><input type="radio" name="mno" value="<%= s[0] %>" <%= cc %>></td><td><%= s[2] %></td><td><%= s[1] %></td><td><%= s[3] %></td><td><%= s[4] %></td>
+						<td><input type="radio" name="mno" value="<%= s[0] %>" <%= cc %>/></td><td><%= s[2] %></td><td><%= s[1] %></td><td><%= s[3] %></td><td><%= s[4] %></td>
 						<td><%= s[5] %></td><td><%= s[6] %></td><td><%= s[7] %></td><td><%= s[8] %></td>
 					</tr>
 					<%
@@ -104,8 +97,12 @@
 				</table>
 			</div>
 			</div>
+			<br />
+			<div style="float: left"><button type="submit" name="mkanri" value="delete" style="font-size: 20px; width: 120px; heght: 40px;">削除</button></div>
+			<div style="text-align: right"><button type="submit" name="mkanri" value="money" style="font-size: 20px; width: 120px; heght: 40px;">入金・登録</button></div>
 		</div>
 		</div>
+		</form>
 		<%
 			if(loopCount == 0){
 		%>
@@ -113,7 +110,6 @@
 		<%		
 			}
 		%>
-	</form>
 	</div>
 	<br/>
 	<br/>
