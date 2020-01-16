@@ -47,6 +47,7 @@
 	<h2>基本情報技術者試験午前免除修了試験用<br />申込み画面</h2>
 	<form method="post" action="./Kakunin">
 		<%= message %>
+		<p class = "s"><span>※</span>は必須です。</p>
 		<div align="center">
 		<div id="empty">
 			<div align="left">
