@@ -63,8 +63,12 @@
 			</div>
 			</div>
 			<br/>
-			<div style="float: left"><button type="submit" name="reset" value="reset" style="font-size: 20px; width: 120px; heght: 40px;">リセット</button></div>
-			<div style="text-align: right"><button type="submit" name="reset" value="noreset" style="font-size: 20px; width: 120px; heght: 40px;">検索</button></div>
+			<div align="right">
+			<div id="kensaku">
+			<button type="submit" name="reset" value="noreset" style="font-size: 20px">検索</button>
+			<button type="submit" name="reset" value="reset" style="font-size: 20px">リセット</button>
+			</div>
+			</div>
 		</div>
 		</div>
 		</form>
@@ -98,8 +102,12 @@
 			</div>
 			</div>
 			<br />
-			<div style="float: left"><button type="submit" name="mkanri" value="delete" style="font-size: 20px; width: 120px; heght: 40px;">削除</button></div>
-			<div style="text-align: right"><button type="submit" name="mkanri" value="money" style="font-size: 20px; width: 120px; heght: 40px;">入金・登録</button></div>
+			<div align= "right">
+			<div id= "toroku">
+			<button type="submit" name="mkanri" value="money" style="font-size: 20px">入金・登録</button>
+			<button type="submit" name="mkanri" value="delete" style="font-size: 20px">削除</button>
+			</div>
+			</div>
 		</div>
 		</div>
 		</form>
