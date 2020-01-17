@@ -65,7 +65,7 @@ p {
 	margin: 10px 0px 10px;
 }
 .s{
-	stext-align: center
+	text-align: center
 }
 span{
 	color: red;
@@ -86,6 +86,6 @@ i#copyright {
 	border-style: none;
 }
 .required:after{
-	color: red;
+	color: #E00;
 	content: "※"
 }
