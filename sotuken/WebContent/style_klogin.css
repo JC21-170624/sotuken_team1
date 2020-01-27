@@ -3,6 +3,7 @@ html,body{
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
+	min-height: 1100px;
 }
 h1 {
 	font-size: 4em;

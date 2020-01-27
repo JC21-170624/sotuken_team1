@@ -6,6 +6,7 @@ html,body{
 }
 body {
 	text-align: center;
+	min-height: 1100px;
 }
 #header {
 	width: 100%;
@@ -35,9 +36,14 @@ a{
 	margin-left: 180px;
 	padding-bottom: 10em;
 }
-#empty1,#empty2 {
+#empty1 {
 	display: table;
 	border-style: dotted;
+	border-width: 1px;
+	padding: 10px;
+}
+#empty2 {
+	display: table;
 	border-width: 1px;
 	padding: 10px;
 }

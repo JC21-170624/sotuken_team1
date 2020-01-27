@@ -28,7 +28,7 @@
 			<a href="https://192.168.54.212/r01JC21Login/msLoginDirect?id=1013">ログイン</a><br />
 		</div>
 	</div>
-	
+
 </div>
 </body>
 </html>

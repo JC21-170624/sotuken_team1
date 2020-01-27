@@ -1,8 +1,11 @@
 @charset "utf-8";
 body{
-	background-color: #EEEEEE;
+	background-image: url("./gazou/gazjou.jpg");
+	background-size: 2000px 1100px;
+	background-repeat: no-repeat;
 	z-index: 1;
 	width: 100%;
+	min-height: 1100px;
 	min-width: 1700px;
 }
 #header{

@@ -25,7 +25,7 @@
 			<li><a href="./KHome">ホーム</a></li>
 			<li><a href="./KSiken">試験一覧</a></li>
 			<li><a href="./Mkanri">申込み管理</a></li>
-			<li><a href="./KLogout">ログアウト</a></li>
+			<li><a href="http://192.168.54.191:8080/KenteiMosikomi/KLogin">ログアウト</a></li>
 		</ul>
 	</div>
 	<div id="contents">
