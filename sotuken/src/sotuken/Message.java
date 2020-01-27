@@ -47,8 +47,10 @@ public class Message extends HttpServlet {
 		String gno = request.getParameter("gno");
 		String menjo = request.getParameter("menjo");
 		String henko = request.getParameter("henko");
-		String henkoStr = "‘I‘ð‚µ‚È‚¢";
-		if(henko.equals("sg")) {
+		String henkoStr = "-";
+		if(henko.equals("no")) {
+			henkoStr = "‘I‘ð‚µ‚È‚¢";
+		}else if(henko.equals("sg")) {
 			henkoStr = "SG‚ðŽóŒ±‚·‚é";
 		}else if(henko.equals("mo")) {
 			henkoStr = "•Ô‹à‚ðŠó–]‚·‚é";
