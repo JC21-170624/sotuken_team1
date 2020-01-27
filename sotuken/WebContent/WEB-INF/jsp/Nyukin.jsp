@@ -32,7 +32,7 @@
 			<li><a href="./KHome">ホーム</a></li>
 			<li><a href="./KSiken">試験一覧</a></li>
 			<li><a href="./Mkanri">申込み管理</a></li>
-			<li><a href="./KLogout">ログアウト</a></li>
+			<li><a href="http://192.168.54.191:8080/KenteiMosikomi/KLogin">ログアウト</a></li>
 		</ul>
 	</div>
 	
@@ -41,9 +41,9 @@
 		<form method="get" action="./Message2">
 		<div align="center">
 		<div id="empty1">
-			<div align="left">
+			<div align="center">
 			<div id="empty2">
-				<div align="left">
+				<div align="center">
 				<div id="a">
 				
 					<p>試験名    : <%= list[9] %></p>
@@ -55,9 +55,9 @@
 				</div>
 			</div>
 			</div>
-			<div align="left">
+			<div align="center">
 			<div id="empty3">
-				<div align="left">
+				<div align="center">
 				<div id="b">
 				<table border ="1" cellpadding="10">
 					<tr>

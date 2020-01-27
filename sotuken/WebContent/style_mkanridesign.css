@@ -4,6 +4,7 @@ body{
 	z-index: 1;
 	width: 100%;
 	min-width: 1700px;
+	min-height: 1100px;
 }
 #header{
 	min-width:  1500px;
