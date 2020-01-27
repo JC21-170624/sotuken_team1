@@ -16,8 +16,10 @@
 	String sno = (String)request.getAttribute("sno");
 	String menjo = (String)request.getAttribute("menjo");
 	String henko = (String)request.getAttribute("henko");
-	String message = "SGを受験する";
-	if(henko.equals("mo")){
+	String message = "選択しない";
+	if(henko.equals("sg")){
+		message = "SGを受験する";
+	}else if(henko.equals("mo")){
 		message = "返金を希望する";
 	}
 %>

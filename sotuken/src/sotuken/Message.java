@@ -47,6 +47,12 @@ public class Message extends HttpServlet {
 		String gno = request.getParameter("gno");
 		String menjo = request.getParameter("menjo");
 		String henko = request.getParameter("henko");
+		String henkoStr = "‘I‘ð‚µ‚È‚¢";
+		if(henko.equals("sg")) {
+			henkoStr = "SG‚ðŽóŒ±‚·‚é";
+		}else if(henko.equals("mo")) {
+			henkoStr = "•Ô‹à‚ðŠó–]‚·‚é";
+		}
 		String menjuken = request.getParameter("menjuken");
 		String ydate = request.getParameter("ydate");
 		
@@ -135,7 +141,7 @@ public class Message extends HttpServlet {
 				st1.setString(2, sno);
 				st1.setString(3, mdate);
 				st1.setString(4, menjo);
-				st1.setString(5, henko);
+				st1.setString(5, henkoStr);
 				st1.setString(6, menjuken);
 				st1.setString(7, ydate);
 				int result = st1.executeUpdate();

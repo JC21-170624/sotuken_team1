@@ -17,6 +17,7 @@
 	String gno = (String)session.getAttribute("gno");
 	String menjo = "";
 	String henko = "";
+	String cc0 = "Checked";
 	String cc1 = "";
 	String cc2 = "";
 	
@@ -30,13 +31,15 @@
 	}
 	
 	if(henko.length() != 0){
-		if(henko.equals("SGを受験する")){
+		if(henko.equals("no")){
+			cc0 = "Checked";
+		}else if(henko.equals("sg")){
 			cc1 = "Checked";
 		}else{
 			cc2 = "Checked";
 		}
 	}else{
-		cc1 = "Checked";
+		cc0 = "Checked";
 	}
 %>
 <div id="container">
@@ -66,7 +69,7 @@
 				<th>一部免除申請番号</th><td><input type="text" name="menjo" style="font-size: 28px" value=<%= menjo %>></input></td>
 				</tr>
 				<tr>
-				<th>FE受験から変更する</th><td><input type="radio" name="henko" value="sg" <%= cc1 %>/>SGを受験する<input type="radio" name="henko" value="mo" <%= cc2 %>/>返金を希望する</td>
+				<th>FE受験から変更する</th><td><input type="radio" name="henko" value="no" <%= cc0 %>/>選択しない<input type="radio" name="henko" value="sg" <%= cc1 %>/>SGを受験する<input type="radio" name="henko" value="mo" <%= cc2 %>/>返金を希望する</td>
 				</tr>
 				</table>
 			</div>

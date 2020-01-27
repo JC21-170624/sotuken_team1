@@ -46,7 +46,7 @@
 						<th>試験名</th><td>
 							<select name="sno" style="font-size: 28px">
 							<option value="">未選択</option>
-							<option value="S001">情報処理技術者試験</option>
+							<option value="S001">情報処理技術者試験(ITパスポート試験を除く)</option>
 							<option value="S002">基本情報技術者午前免除修了試験</option>
 							<option value="S003">ITパスポート試験</option>
 							<option value="S004">Javaプログラミング能力認定試験 1級</option>
