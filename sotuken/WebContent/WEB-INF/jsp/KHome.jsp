@@ -50,10 +50,8 @@
 							<option value="S004">Javaプログラミング能力認定試験 1級</option>
 							<option value="S005">Javaプログラミング能力認定試験 2級</option>
 							<option value="S006">Javaプログラミング能力認定試験 3級</option>
-							<option value="S009">OracleMaster Silver オンライン試験</option>
-							<option value="S010">OracleMaster Silver VUE会場試験</option>
-							<option value="S007">OracleMaster Bronze オンライン試験</option>
-							<option value="S008">OracleMaster Bronze VUE会場試験</option>
+							<option value="S007">OracleMaster オンライン試験</option>
+							<option value="S008">OracleMaster VUE会場試験</option>
 							</select>
 						</td>
 					</tr>
