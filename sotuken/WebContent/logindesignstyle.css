@@ -11,6 +11,10 @@ body{
 #header{
 	min-width: 1500px;
 }
+#login{
+	background-color: white;
+	z-index: 2;
+}
 h1{
 	background-color: #232F3E;
 	color: #FFFFFF;
