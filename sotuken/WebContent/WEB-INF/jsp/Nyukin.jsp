@@ -61,7 +61,7 @@
 				<div id="b">
 				<table border ="1" cellpadding="10">
 					<tr>
-						<th>受験番号</th><td><input type="text" name="juken_no" style="font-size: 28px" ></td>
+						<th>受験番号</th><td><input type="text" name="juken_no" pattern="^[0-9A-Za-z]+$" title="半角英数のみ" style="font-size: 28px" ></td>
 					</tr>
 				</table>
 				<br/>
