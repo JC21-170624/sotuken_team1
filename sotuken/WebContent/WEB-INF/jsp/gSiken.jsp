@@ -61,7 +61,7 @@
 			</div>
 			</br>
 			<div align="right">
-				<input type ="submit" value ="申し込み画面へ" style="font-size: 20px"></input>
+				<input type ="submit" value ="申込み画面へ" style="font-size: 20px"></input>
 			</div>
 			</form>
 		</div>
