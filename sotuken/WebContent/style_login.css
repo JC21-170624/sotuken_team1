@@ -6,9 +6,8 @@ html,body{
 	min-height: 1100px;
 }
 h1 {
-	font-size: 4em;
 	text-align: center;
-	margin-top: 0px;
+	margin: 0px;
 }
 #container {
 	position: relative;
@@ -17,7 +16,6 @@ h1 {
 #login{
 	font-size: 2em;
 	display: table;
-	margin-top: 19%;
 }a{
 	line-height: 3;
 }
