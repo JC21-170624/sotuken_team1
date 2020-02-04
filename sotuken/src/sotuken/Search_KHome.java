@@ -70,7 +70,7 @@ public class Search_KHome extends HttpServlet {
 				if(flg.equals("0")) {
 					PreparedStatement st = 
 							connection.prepareStatement(
-								"select mosikomi.m_no, s_name, g_no, juken_no, kigen, s_date from nyukingo left outer join mosikomi on nyukingo.m_no = mosikomi.m_no left outer join siken on mosikomi.s_no = siken.s_no order by siken.s_no, m_date desc"
+								"select mosikomi.m_no, s_name, g_no, juken_no, kigen, s_date from nyukingo left outer join mosikomi on nyukingo.m_no = mosikomi.m_no left outer join siken on mosikomi.s_no = siken.s_no where juken_flg = '受験前' order by siken.s_no, m_date desc"
 								);
 					// SELECT S_NAME, G_NO, JUKEN_NO, KIGEN, S_DATE FROM NYUKINGO N LEFT OUTER JOIN MOSIKOMI M ON N.M_NO = M.M_NO LEFT OUTER JOIN SIKEN S ON M.S_NO = S.S_NO
 					ResultSet rs = st.executeQuery();
@@ -92,7 +92,7 @@ public class Search_KHome extends HttpServlet {
 				}else if(flg.equals("gno")) {
 					PreparedStatement st = 
 							connection.prepareStatement(
-								"select mosikomi.m_no, s_name, g_no, juken_no, kigen, s_date from nyukingo left outer join mosikomi on nyukingo.m_no = mosikomi.m_no left outer join siken on mosikomi.s_no = siken.s_no where g_no = ?"
+								"select mosikomi.m_no, s_name, g_no, juken_no, kigen, s_date from nyukingo left outer join mosikomi on nyukingo.m_no = mosikomi.m_no left outer join siken on mosikomi.s_no = siken.s_no where g_no = ? and juken_flg = '受験前' order by siken.s_no, m_date desc"
 								);
 					st.setString(1, gno);
 					// SELECT S_NAME, G_NO, JUKEN_NO, KIGEN, S_DATE FROM NYUKINGO N LEFT OUTER JOIN MOSIKOMI M ON N.M_NO = M.M_NO LEFT OUTER JOIN SIKEN S ON M.S_NO = S.S_NO 大文字版
@@ -115,7 +115,7 @@ public class Search_KHome extends HttpServlet {
 				}else if(flg.equals("sno")) {
 					PreparedStatement st = 
 							connection.prepareStatement(
-								"select mosikomi.m_no, s_name, g_no, juken_no, kigen, s_date from nyukingo left outer join mosikomi on nyukingo.m_no = mosikomi.m_no left outer join siken on mosikomi.s_no = siken.s_no where siken.s_no = ?"
+								"select mosikomi.m_no, s_name, g_no, juken_no, kigen, s_date from nyukingo left outer join mosikomi on nyukingo.m_no = mosikomi.m_no left outer join siken on mosikomi.s_no = siken.s_no where siken.s_no = ? and juken_flg = '受験前' order by siken.s_no, m_date desc"
 								);
 					st.setString(1, sno);
 					// SELECT S_NAME, G_NO, JUKEN_NO, KIGEN, S_DATE FROM NYUKINGO N LEFT OUTER JOIN MOSIKOMI M ON N.M_NO = M.M_NO LEFT OUTER JOIN SIKEN S ON M.S_NO = S.S_NO 大文字版
@@ -138,7 +138,7 @@ public class Search_KHome extends HttpServlet {
 				}else if(flg.equals("gno sno")) {
 					PreparedStatement st = 
 							connection.prepareStatement(
-								"select mosikomi.m_no, s_name, g_no, juken_no, kigen, s_date from nyukingo left outer join mosikomi on nyukingo.m_no = mosikomi.m_no left outer join siken on mosikomi.s_no = siken.s_no where g_no = ? and siken.s_no = ?"
+								"select mosikomi.m_no, s_name, g_no, juken_no, kigen, s_date from nyukingo left outer join mosikomi on nyukingo.m_no = mosikomi.m_no left outer join siken on mosikomi.s_no = siken.s_no where g_no = ? and siken.s_no = ? and juken_flg = '受験前' order by siken.s_no, m_date desc"
 								);
 					st.setString(1, gno);
 					st.setString(2, sno);
