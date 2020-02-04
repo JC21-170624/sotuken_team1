@@ -15,9 +15,8 @@ h1 {
 	min-height: 100%;
 }
 #login{
-	position: absolute;
 	font-size: 2em;
-	width: 100%;
+	display: table;
 	margin-top: 19%;
 }a{
 	line-height: 3;

@@ -21,9 +21,8 @@
 <div id="container">
 
 		<h1>検定申込み窓口簡略化システム</h1>
-
-	<div id="login">
-		<div align="center">
+	<div align="center">
+		<div id="login">
 			<p style="font-size: 20px"><%= message %></p>
 			<a href="https://192.168.54.212/r01JC21Login/msLoginDirect?id=1013">ログイン</a><br />
 		</div>

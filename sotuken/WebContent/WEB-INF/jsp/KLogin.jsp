@@ -23,10 +23,9 @@
 <div id="container">
 
 		<h1>検定申込み窓口簡略化システム</h1>
+	<div align="center">
+		<div id="login">
 		<h2 style="text-align: center">管理者用ログイン画面</h2>
-
-	<div id="login">
-		<div align="center">
 			<p <%= style %>><%= message %></p>
 			<form method="post" action="./Password">
 			<th>パスワード：</th><th><input name="pass" id="password" type="password" style="font-size: 28px"></input></th>
