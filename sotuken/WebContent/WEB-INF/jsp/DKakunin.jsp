@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--<title>検定申込み窓口簡略化システム</title>--><title>学生用</title>
+<!--<title>検定申込み窓口簡略化システム</title>--><title>管理者用</title>
 <link href="style_dkakunin.css" rel="stylesheet" type="text/css" />
 <link href="designstyle.css" rel="stylesheet" type="text/css" />
 
