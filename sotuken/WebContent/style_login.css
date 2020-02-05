@@ -16,6 +16,10 @@ h1 {
 #login{
 	font-size: 2em;
 	display: table;
+	/*border-style: solid;
+	border-width: 1px;
+	padding-bottom: 10px;*/
+	margin-top: 20%;
 }a{
 	line-height: 3;
 }

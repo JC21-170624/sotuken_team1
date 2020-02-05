@@ -37,7 +37,7 @@
 		<div id="empty">
 			<div align="left">
 			<div id="a">
-				<table border ="1" cellpadding="10">
+				<table border ="1" style="font-size: 18px" cellpadding="10">
 					<tr>
 						<th>試験名</th><th>学籍番号</th><th>申込み日</th><th>一部免除申請番号</th><th>返金の有無</th><th>午前免除修了試験用受験番号</th><th>受験予定年月</th><th>入金の有無</th>
 					</tr>

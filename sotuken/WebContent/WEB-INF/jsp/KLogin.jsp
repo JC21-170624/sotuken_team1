@@ -23,7 +23,7 @@
 <div id="container">
 
 		<h1>検定申込み窓口簡略化システム</h1>
-	
+	<div align= "center">
 		<div id="login">
 		<h2 style="text-align: center">管理者用ログイン画面</h2>
 			<p <%= style %>><%= message %></p>
@@ -42,10 +42,10 @@
 				     }
 				 }, false);
 			 </script>
-			<div style= "text-align:center"><button type="submit" name="klogin" style="font-size: 20px">ログイン</button></div>
+			<button type="submit" name="klogin" style="font-size: 20px">ログイン</button>
 			</form>
 		</div>
-	
+	</div>
 	
 </div>
 </body>

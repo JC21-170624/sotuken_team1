@@ -1,7 +1,8 @@
 @charset "utf-8";
 body{
-	background-color: #EEEEEE;
-	z-index: 1;
+	background-image: url("./gazou/003-subtle-light-pattern.jpg");
+	/*background-size: 2000px 1100px;*/
+	z-index: 1
 	width: 100%;
 	min-width: 1700px;
 }
@@ -40,7 +41,7 @@ h3{
 	min-width: 1500px;
 }
 table{
-	font-size: 18px;
+	font-size: 28px;
 	border-style: solid;
 	border-collapse: collapse; 
 	border: 1px solid #000000;
