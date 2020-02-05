@@ -75,7 +75,7 @@
 		<div id="empty2">
 			<div align="left">
 			<div id="b">
-				<table border ="1" align ="left" cellpadding="6"><!--本文-->
+				<table border ="1" align ="left" style="font-size: 18px" cellpadding="6"><!--本文-->
 				<caption><!--テーブル名--></caption>
 					<tr>
 						<th>/</th><th>試験名</th><th>学籍番号</th><th>申込み日</th><th>一部免除申請番号</th><th>返金希望の有無</th><th>受験番号(FE午前修了試験用)</th><th>予定受験日</th><th>入金の有無</th>

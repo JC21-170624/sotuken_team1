@@ -1,8 +1,7 @@
 @charset "utf-8";
 body{
-	background-image: url("./gazou/gazou4.jpg");
-	background-size: 2000px 1100px;
-	background-repeat: no-repeat;
+	background-image: url("./gazou/003-subtle-light-pattern.jpg");
+	/*background-size: 2000px 1100px;*/
 	z-index: 1;
 	width: 100%;
 	min-height: 1100px;
@@ -10,10 +9,6 @@ body{
 }
 #header{
 	min-width: 1500px;
-}
-#login{
-	background-color: white;
-	z-index: 2;
 }
 h1{
 	background-color: #232F3E;
